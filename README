@@ -1,0 +1,21 @@
+NAME: Mihir Arya
+EMAIL: mihirarya@ucla.edu
+ID: 705126618
+
+The tarred file lab1b-705126618.tar.gz contains four files pertaining to project 1b. The first, is this file,
+a README, which gives an overview of each of the remaining files. lab1b-server.c contains the server side
+implementation of this project; at a high level, it forwards client output to a child process, and then redirects
+the output of the child process back towards the client. The client sends/receives data from the server, posts data
+to the screen as necessary, and also mantains a log file of all communication with the server. The Makefile is capable
+of building both the source files, where the default case is to build both simultaneously. It also has a clean command
+which removes all files from the current working directory except the four aforementioned, and a dist command which produces 
+the tar file.  
+
+External Sources Referred to:
+
+	 https://zlib.net/zlib_how.html (information on zlib approach)
+
+	 https://docs.microsoft.com/en-us/windows/win32/api/winsock/ns-winsock-hostent#:~:text=The%20hostent%20structure%20is%20used,free%20any%20of%20its%20components.
+	 ( hostent structure )
+
+...
