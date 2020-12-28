@@ -1,0 +1,18 @@
+NAME: Mihir Arya
+EMAIL: mihirarya@ucla.edu
+ID: 705126618
+
+The tar project file for project 1a, contains this file (README), along with a source
+code file (lab1a.c), and a Makefile. The source code file contains the implementation for a character-at-a-time
+full duplex I/O which occurs during the general case, and the implementation to pass input in the following
+manner when --shell argument is passed: Keyboard Input -> Terminal -> Shell Process -> Terminal -> Terminal Out . 
+The Makefile contains a default case, which compiles the source C-file, in addition to a 'dist' case which dumps 
+the three files of this project into a directory, and a 'clean' case which removes all files from the current working 
+directory except for the three files part of this project.
+
+References: 
+
+	    https://www.tutorialspoint.com/inter_process_communication/inter_process_communication_pipes.htm#:~:text=Two%2Dway%
+	    20Communication%20Using%20Pipes&text=Step%201%20%E2%88%92%20Create%20two%20pipes,2%20%E2%88%92%20Create%20a%20child%20process.
+
+	    The above source was used to gain a high level understanding of the dynamic between parent/child processes and pipes.
