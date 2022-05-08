@@ -1,5 +1,4 @@
 NAME: Mihir Arya
-<<<<<<< HEAD
 
 The tarred file lab1b-705126618.tar.gz contains four files pertaining to project 1b. The first, is this file,
 a README, which gives an overview of each of the remaining files. lab1b-server.c contains the server side
@@ -17,10 +16,7 @@ External Sources Referred to:
 	 https://docs.microsoft.com/en-us/windows/win32/api/winsock/ns-winsock-hostent#:~:text=The%20hostent%20structure%20is%20used,free%20any%20of%20its%20components.
 	 ( hostent structure )
 
-...
-=======
-EMAIL: mihirarya@ucla.edu
-ID: 705126618
+
 
 The tar project file for project 1a, contains this file (README), along with a source
 code file (lab1a.c), and a Makefile. The source code file contains the implementation for a character-at-a-time
@@ -36,4 +32,3 @@ References:
 	20Communication%20Using%20Pipes&text=Step%201%20%E2%88%92%20Create%20two%20pipes,2%20%E2%88%92%20Create%20a%20child%20process.
 
 	The above source was used to gain a high level understanding of the dynamic between parent/child processes and pipes.
->>>>>>> cs111-p1a/master
