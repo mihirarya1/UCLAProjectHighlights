@@ -1,7 +1,5 @@
 NAME: Mihir Arya
 
-This is the first of a two step project whih
-
 The tarred file lab1b-705126618.tar.gz contains four files pertaining to project 1b. The first, is this file,
 a README, which gives an overview of each of the remaining files. lab1b-server.c contains the server side
 implementation of this project; at a high level, it forwards client output to a child process, and then redirects
