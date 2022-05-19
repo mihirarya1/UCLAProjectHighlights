@@ -8,9 +8,6 @@ ID: 705126618
 File contains source code for project 1b client area...                                                                                                                                             
 */
 
-
-
-
 #include <termios.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -225,36 +222,36 @@ int main ( int argc, char *argv[] )
 {
 
   static struct option long_options[] = {
-    {"port", required_argument, 0, 'p'},
-    {"log", required_argument, 0, 'l'},
-    {"compress", no_argument, 0, 'c'},
+    {"port", required_argument, 0, 'p'}, // port number requisites an string destination port passed in
+    {"log", required_argument, 0, 'l'}, // log requisites a filename to which TCP communication will be saved. 
+    {"compress", no_argument, 0, 'c'}, // no argument for compress
     {0,0,0,0}
   };
 
   int in; char* port=NULL; char* logFile = NULL;
   while ( ( in = getopt_long(argc,argv, "", long_options, NULL) ) != -1 )
     {
-      if (in == 'p')
+      if (in == 'p') // read in port
         port=optarg;
-      else if (in == 'l')
+      else if (in == 'l') // read in log filename
 	logFile=optarg;
-      else if (in == 'c')
+      else if (in == 'c') // compression option on 
 	setCompress=1;
-      else if (in == '?')
+      else if (in == '?') // unknown arg
 	{
 	  fprintf(stderr,"Unrecognized argument with message %s\n", strerror(errno));
 	  exit(1);
 	}
     }
-  if (port==NULL)
+  if (port==NULL) // port needs to be specified
     { fprintf(stderr, "Need to specify a --port ' ' argument\n"); exit(1); }
   if (setCompress)
     initializeCompression();
-  if (logFile!=NULL)
+  if (logFile!=NULL) // if log file specified 
     { 
-      if ( ulimit(UL_SETFSIZE, 10000) == -1 )
+      if ( ulimit(UL_SETFSIZE, 10000) == -1 ) // sets an upper bound on the case of log file, in case we write to log file infinitely say
 	{ fprintf(stderr, "ulimit() failure with message %s\n", strerror(errno)); exitOut(1); }
-      fdLog = open(logFile, O_CREAT|O_RDWR|O_TRUNC, 0777); 
+      fdLog = open(logFile, O_CREAT|O_RDWR|O_TRUNC, 0777); // open log file with given permissions 
     }
 
 
