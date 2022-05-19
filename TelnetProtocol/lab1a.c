@@ -1,11 +1,17 @@
 /*
 NAME: Mihir Arya
-EMAIL: mihirarya@ucla.edu
-ID: 705126618
 */
 
 /* 
-File contains the source code for the first part of this project; the first few functions generally 
+In the general case, this piece of code expects a user to input some data into stdin, which the code
+will then process (mapping carriage returns and line feeds to <cr><lf>) and write to stdout under 
+the simulated terminal modes. This is essentially full-duplex, character-at-a-time terminal I/O.
+
+In the case where a command line argument '--shell' is provided, this piece of code does a similar task
+as mentioned above, with the additional complexity of having to create and manage a child shell process
+from which back and forth communication with the terminal will be managed.
+
+This file contains the source code for the first part of this project; the first few functions generally 
 pertain to an wrapper of system calls to check for errors more elegantly, the middle contains the 
 code for case with no argument and with a shell argument, and the final section contains main.
 */
