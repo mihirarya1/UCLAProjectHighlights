@@ -1,12 +1,31 @@
-/*                                                                                                                                                                                                       
-NAME: Mihir Arya                                                                                                                                                                                         
-EMAIL: mihirarya@ucla.edu                                                                                                                                                                               
-ID: 705126618                                                                                                                                                                                            
+/*
+NAME: Mihir Arya
 */
 
-/*                                                                                                                                                                                                      
-File contains source code for project 1b client area...                                                                                                                                             
+/* 
+In the general case, this piece of code expects a user to input some data into stdin, which the code
+will then process (mapping carriage returns and line feeds to <cr><lf>) and write to stdout under 
+the simulated terminal modes. This is essentially full-duplex, character-at-a-time terminal I/O.
+In the case where a command line argument '--shell' is provided, this piece of code does a similar task
+as mentioned above, with the additional complexity of having to create and manage a child shell process
+from which back and forth communication with the terminal will be managed.
+This file contains the source code for the first part of this project; the first few functions generally 
+pertain to an wrapper of system calls to check for errors more elegantly, the middle contains the 
+code for case with no argument and with a shell argument, and the final section contains main.
+
+This aspect of the telnet project is a continuation of part 1. This file contains all client side acitivites 
+needed to process user-input from stdin, send it to a specified port on a specified remote client using TCP 
+socket programming, and then receive and process the input from that remote client. Logging options can be specified, 
+to record all read/write transactions between the client and the server to stdout. Additionally, a compression option 
+can be specified, which will compress any data being sent to the client, and also decompress any data being received 
+from the same. 
+The first few functions in this file are helper functions pertaining to tasks like safe reads, safe writes, safe 
+exits, stream compression intialization, etc. These are followed by functions to process things like compressed reads
+and writes, logging, polled I/O from stdin/server. Finally, the main method processes all necessary user inputs and 
+options (such as port number, log file if logging specified, etc).
+
 */
+
 
 #include <termios.h>
 #include <unistd.h>
