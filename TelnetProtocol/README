@@ -5,7 +5,7 @@ part1 and part2:
 	-part1: Character-at-a-time, full duplex terminal I/O; Polled I/O and passing input and output between 
 	        two processes via interprocess communication paradigms (forking, pipes).
 	-part2: passing input and output between a client terminal and remote shell over a TCP socket, and 
-	        compressing said inputs and outputs.
+	        compressing said inputs and outputs (socket programming).
 
 part1.c contains the implementation for a character-at-a-time full duplex I/O which occurs during the general case, and 
 the implementation to pass input in the following manner when --shell argument is passed: Keyboard Input -> Terminal -> 
