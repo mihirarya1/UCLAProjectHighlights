@@ -3,8 +3,22 @@ NAME: Mihir Arya
 */
 
 /* 
-File contains the source code for project 1b, server area...
+
+This aspect of the telnet project is a continuation of part 1. This file contains all server side acitivites 
+needed to process user-input sent from the client on the specified port using TCP. We (the server) process 
+(uncompress, map cr/lf to <cr><lf>) this data as necessary, and then send it to a child shell via interprocess 
+communication methods (pipes, as was done in part 1). The child then does mappings of <lf> to <cr><lf> as necessary 
+and sends this data back to the main server routing via pipes. The server finally performs compression on this data
+as needed and sends it back to the client via TCP. Edge cases relating to ^C or EOF's from the client or child 
+process are appropriately handled, bearing in mind proper close down procedures of open pipes or compression streams
+if these commands are received. 
+
+The first few functions in this file are helper methods relating to safe reads/writes/exits. The middle portion
+pertains to appropriately initializing and using compression streams, creating a TCP connection to the client, and 
+polling/sending input from the client, and the child process. Finally, the main function handles user arguments like 
+port number, child process name, compression scheme, etc. 
 */
+
 
 #include <termios.h>
 #include <unistd.h>
