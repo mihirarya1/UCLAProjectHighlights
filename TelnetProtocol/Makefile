@@ -1,45 +1,31 @@
-<<<<<<< HEAD
 #/*                                                                                                                                                                                                      
-#NAME: Mihir Arya                                                                                                                                                                                        
-#EMAIL: mihirarya@ucla.edu                                                                                                                                                                               
-#ID: 705126618                                                                                                                                                                                           
+#NAME: Mihir Arya                                                                                                                                                                                                                                                                                                                                                                                  
 #*/
 
 #/*                                                                                                                                                                                                      
-#File contains the project-1b Makefile                                                                                                                              
+#File contains the overall Makefile                                                                                                                              
 #*/
 
 
 
 # Makefile
 
-default: lab1b-client.c lab1b-server.c
-	gcc lab1b-client.c -Wall -Wextra -lz -o lab1b-client
-	gcc lab1b-server.c -Wall -Wextra -lz -o lab1b-server
-
-lab1b-client: lab1b-client.c
-	gcc lab1b-client.c -Wall -Wextra -lz -o lab1b-client
-
-lab1b-server: lab1b-server.c
-	gcc lab1b-server.c -Wall -Wextra -lz -o lab1b-server
-
-dist:
-	 tar -czvf lab1b-705126618.tar.gz README lab1b-client.c lab1b-server.c Makefile 
-
-clean: 
-	ls | egrep -v '^lab1b-server.c$$|^lab1b-client.c$$|^Makefile$$|^README$$' | xargs rm
-=======
-#Makefile for project 1a
-#NAME: Mihir Arya
-#EMAIL: mihirarya@ucla.edu
-#ID: 705126618
-
-lab1a: lab1a.c
+default: part2Client.c part2Server.c part1.c
+	gcc part2Client.c -Wall -Wextra -lz -o part2Client
+	gcc part2Server.c -Wall -Wextra -lz -o part2Server
 	gcc lab1a.c -Wall -Wextra -o lab1a
 
-dist: README lab1a.c Makefile
-	tar -czvf lab1a-705126618.tar.gz README lab1a.c Makefile
+lab1a: part1.c 
+	gcc part1.c -Wall -Wextra -o part1
 
-clean:
-	ls | egrep -v '^lab1a.c$$|^Makefile$$|^README$$' | xargs rm -r
->>>>>>> cs111-p1a/master
+part2Client: part2Client.c
+	gcc part2Client.c -Wall -Wextra -lz -o part2Client
+
+part2Server: part2Server.c
+	gcc part2Server.c -Wall -Wextra -lz -o part2Server
+
+dist:
+	 tar -czvf telnet.tar.gz README part2Client.c part2Server.c part1.c Makefile 
+
+clean: 
+	ls | egrep -v 'part1.c$$|^part2Server.c$$|^part2Client.c$$|^Makefile$$|^README$$' | xargs rm -r
