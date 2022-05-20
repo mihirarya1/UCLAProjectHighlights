@@ -5,7 +5,7 @@ default: fileSystemInterpretation.c fileSystemConsistencyAnalyzer.py
 fileSystemInterpretation: fileSystemInterpretation.c
 	gcc -Wall -Wextra -lm fileSystemInterpretation.c -o fileSystemInterpretation
 
-fileSystemConsistencyAnalyzer.py: fileSystemConsistencyAnalyzer.py
+fileSystemConsistencyAnalyzer: fileSystemConsistencyAnalyzer.py
 	ln -s fileSystemConsistencyAnalyzer.py fileSystemConsistencyAnalyzer
 
 dist: default
