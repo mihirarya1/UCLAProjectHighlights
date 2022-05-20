@@ -1,18 +1,27 @@
 ### Overview:
-	This project prints out the file structure of a provided ext2 file system image
-	and then audits this metadata for any inconsistencies (which would insinuate the
-	file system is corrupted). This project is cut up into two sections, part1 and part2:
-	
-		1. part1 - 
 
-This is the README file for project 3b, CS111, UCLA, Fall 2020! Also contained
-in the tarball for this project (lab3b-705126618.tar.gz), is a Python script
-file titled lab3b.py. lab3b.py is the implementation for decoding the file 
-system descriptor CSV file, generated as mentioned in the earlier part of this
-project's (3) spec, for anomalies and corruption. This project's tarball finally
-contains a Makefile, with a default command of producing a link to lab3b.py, a 
-dist command of building the project tarball with the files described here, in 
-addition to a clean command to restore directory to an untarred project state.
+	This project prints out a file system summary of a provided ext2 file system image
+	and then audits this metadata for any inconsistencies (which would insinuate the
+	file system is corrupted). fileSystemConsistencyAnalyzer.py analyzes for corruption,
+	the file system summary produced by fileSystemInterpretation.c. ext2_fs.h houses 
+	structs/classes of data which are present in the ext2 file system, and is used by 
+	fileSystemInterpretation.c. trivial.img is a sample image to be tested. 
+	
+	The Makefile builds both source files needed, where the default case is to build all 
+	simultaneously. It also has a clean command which removes all files from the current 
+	working directory except source code, and a dist command which produces a tar file.
+	
+### File System Interpretation
+	
+	The C code for this takes in the location of an ext2 file system image to be analyzed
+	and produces summary information pertaining to the following parameters to stdout:
+	super blocks, groups, free-lists, inodes, indirect blocks, and directories.
+	
+	Output for each of the parameters will be in the format stipulated on the following page:
+	[http://web.cs.ucla.edu/~harryxu/courses/111/winter21/ProjectGuide/P3A.html](http://web.cs.ucla.edu/~harryxu/courses/111/winter21/ProjectGuide/P3A.html)
+
+
+	
 
 ### References:
 
