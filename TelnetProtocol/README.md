@@ -25,8 +25,7 @@ Part 2:
 	redirects the output of the child process back towards the client. The client (part2Client.c) sends/receives data from the server, posts
 	data to the screen as necessary, and also mantains a log file of all communication with the server.
 
-![alt text](http://web.cs.ucla.edu/~harryxu/courses/111/winter21/ProjectGuide/P1B_design.png =300x200)  
-
+<a href="url"><img src="[http://url.to/image.png](http://web.cs.ucla.edu/~harryxu/courses/111/winter21/ProjectGuide/P1B_design.png)" align="left" height="200" width="300" ></a>
 
 
 References: 
