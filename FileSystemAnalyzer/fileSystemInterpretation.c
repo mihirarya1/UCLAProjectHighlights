@@ -1,6 +1,4 @@
 //NAME: Mihir Arya
-//EMAIL: mihirarya@ucla.edu
-//ID: 705126618
 
 
 // Source file (lab3a.c) for project 3a, cs111!
