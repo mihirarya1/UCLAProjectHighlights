@@ -1,9 +1,11 @@
 This project builds a multi-process telnet-like client and server. This project is cut up into two sections,
 part1 and part2:
+
 	-part1: Character-at-a-time, full duplex terminal I/O; Polled I/O and passing input and output between 
 	        two processes via interprocess communication paradigms (forking, pipes).
 	-part2: passing input and output between a client terminal and remote shell over a TCP socket, and 
 	        compressing said inputs and outputs (socket programming).
+		
 The Makefile is capable of building all three of the source files needed, where the default case is to build all simultaneously. 
 It also has a clean command which removes all files from the current working directory except source code, and a dist command 
 which produces a tar file.
@@ -15,6 +17,7 @@ Part 1:
 	Shell Process -> Terminal -> Terminal Out. 
 
 Part 2:
+
 	part2 is in portions a continuation/adaptation of part1. part2Server.c contains the server side implementation of this 
 	project; at a high level, it forwards client output (under the rules of part1Client.c) to a child process, and then 
 	redirects the output of the child process back towards the client. The client (part2Client.c) sends/receives data from the server, posts
