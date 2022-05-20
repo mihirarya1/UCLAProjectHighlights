@@ -1,4 +1,4 @@
-Overview:
+### Overview:
 
 	This project builds a multi-process telnet-like client and server. This project is cut up into two sections,
 	part1 and part2:
@@ -12,13 +12,13 @@ Overview:
 	It also has a clean command which removes all files from the current working directory except source code, and a dist command 
 	which produces a tar file.
 
-Part 1:
+### Part 1:
 
 	part1.c contains the implementation for a character-at-a-time full duplex I/O which occurs during the general case, and 
 	the implementation to pass input in the following manner when --shell argument is passed: Keyboard Input -> Terminal -> 
 	Shell Process -> Terminal -> Terminal Out. 
 
-Part 2:
+### Part 2:
 
 	part2 is in portions a continuation/adaptation of part1. part2Server.c contains the server side implementation of this 
 	project; at a high level, it forwards client output (under the rules of part1Client.c) to a child process, and then 
@@ -28,8 +28,7 @@ Part 2:
 ![alt text](http://web.cs.ucla.edu/~harryxu/courses/111/winter21/ProjectGuide/P1B_design.png)
 
 
-References: 
-
+### References: 
 
 	https://zlib.net/zlib_how.html 
 	(information on zlib approach)
