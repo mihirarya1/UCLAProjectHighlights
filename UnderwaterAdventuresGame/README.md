@@ -31,4 +31,22 @@ Graphics Features:
           This will be necessary both in determining collisions between the submarine and 
           physical-obstacles/enemies, but also between the submarine’s torpedo beam and enemies. 
           Physics-based modelling will also be used, to realistically animate the beam of the sub-
-          marine in addition to the movement of enemies (intended to be fish at this point in time). 
+          marine in addition to the movement of enemies (intended to be fish at this point in time).
+          
+          
+          
+          
+The following presentation regurgitates some of the information above and includes game visuals/animations:
+          
+          
+  ![Alt text](./UnderwaterAdventuresPresentation/slide1.svg)
+  
+  ![Alt text](./UnderwaterAdventuresPresentation/slide2.svg)
+  
+  ![Alt text](./UnderwaterAdventuresPresentation/slide3.svg)
+  
+  ![Alt text](./UnderwaterAdventuresPresentation/slide4.svg)
+  
+  ![Alt text](./UnderwaterAdventuresPresentation/slide5.svg)
+  
+  ![Alt text](./UnderwaterAdventuresPresentation/slide6.svg)
