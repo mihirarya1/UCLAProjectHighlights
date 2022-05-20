@@ -1,8 +1,16 @@
-default: lab3a.c 
-	gcc -Wall -Wextra -lm lab3a.c -o lab3a
+default: fileSystemInterpretation.c fileSystemConsistencyAnalyzer.py   
+	gcc -Wall -Wextra -lm fileSystemInterpretation.c -o fileSystemInterpretation
+	ln -s fileSystemConsistencyAnalyzer.py fileSystemConsistencyAnalyzer
+
+fileSystemInterpretation: fileSystemInterpretation.c
+	gcc -Wall -Wextra -lm fileSystemInterpretation.c -o fileSystemInterpretation
+
+fileSystemConsistencyAnalyzer.py: fileSystemConsistencyAnalyzer.py
+	ln -s fileSystemConsistencyAnalyzer.py fileSystemConsistencyAnalyzer
 
 dist: default
-	tar -czvf lab3a-705126618.tar.gz lab3a.c Makefile README ext2_fs.h
+	tar -czvf fileSystemProject.tar.gz fileSystemInterpretation.c fileSystemConsistencyAnalyzer.py Makefile README ext2_fs.h
 
 clean:
-	ls | egrep -v '^lab3a.c$$|^Makefile$$|^README$$|^ext2_fs.h$$' | xargs rm
+	ls | egrep -v '^fileSystemConsistencyAnalyzer.py$$|^fileSystemInterpretation.c$$|^Makefile$$|^README$$|^ext2_fs.h$$' | xargs rm
+
