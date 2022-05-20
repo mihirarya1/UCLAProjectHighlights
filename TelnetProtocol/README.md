@@ -1,14 +1,16 @@
-This project builds a multi-process telnet-like client and server. This project is cut up into two sections,
-part1 and part2:
+Overview:
 
-	1. part1: Character-at-a-time, full duplex terminal I/O; Polled I/O and passing input and output between 
-	        two processes via interprocess communication paradigms (forking, pipes).
-	2. part2: passing input and output between a client terminal and remote shell over a TCP socket, and 
-	        compressing said inputs and outputs (socket programming).
-		
-The Makefile is capable of building all three of the source files needed, where the default case is to build all simultaneously. 
-It also has a clean command which removes all files from the current working directory except source code, and a dist command 
-which produces a tar file.
+	This project builds a multi-process telnet-like client and server. This project is cut up into two sections,
+	part1 and part2:
+
+		1. part1: Character-at-a-time, full duplex terminal I/O; Polled I/O and passing input and output between 
+			two processes via interprocess communication paradigms (forking, pipes).
+		2. part2: passing input and output between a client terminal and remote shell over a TCP socket, and 
+			compressing said inputs and outputs (socket programming).
+
+	The Makefile is capable of building all three of the source files needed, where the default case is to build all simultaneously. 
+	It also has a clean command which removes all files from the current working directory except source code, and a dist command 
+	which produces a tar file.
 
 Part 1:
 
@@ -23,7 +25,7 @@ Part 2:
 	redirects the output of the child process back towards the client. The client (part2Client.c) sends/receives data from the server, posts
 	data to the screen as necessary, and also mantains a log file of all communication with the server.
 
-![alt text](http://web.cs.ucla.edu/~harryxu/courses/111/winter21/ProjectGuide/P1B_design.png)  
+![alt text](http://web.cs.ucla.edu/~harryxu/courses/111/winter21/ProjectGuide/P1B_design.png =300x200)  
 
 
 
