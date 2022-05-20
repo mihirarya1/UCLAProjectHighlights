@@ -1,7 +1,9 @@
 ### Overview:
-	This project prints out the file structure of a provided ext2 file system 
-	image, and then audits this metadata for any inconsistencies (which would
-	insinuate the file system is corrupted). 
+	This project prints out the file structure of a provided ext2 file system image
+	and then audits this metadata for any inconsistencies (which would insinuate the
+	file system is corrupted). This project is cut up into two sections, part1 and part2:
+	
+		1. part1 - 
 
 This is the README file for project 3b, CS111, UCLA, Fall 2020! Also contained
 in the tarball for this project (lab3b-705126618.tar.gz), is a Python script
