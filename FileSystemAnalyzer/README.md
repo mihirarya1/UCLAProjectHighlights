@@ -28,7 +28,7 @@ Output for each of the parameters will be in the format stipulated on the follow
 	inode which shows up in the list of inodes doesn't appear in the bitmap of free inodes),
 	directory consistency audits, etc. 
 	
-	More information on the types of auditing performed can be found at:
+More information on the types of auditing performed can be found at:
 [http://web.cs.ucla.edu/~harryxu/courses/111/winter21/ProjectGuide/P3B.html](http://web.cs.ucla.edu/~harryxu/courses/111/winter21/ProjectGuide/P3B.html)
 
 
