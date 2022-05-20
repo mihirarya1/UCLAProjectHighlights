@@ -1,6 +1,0 @@
-This folder contains all JavaScript code and necessary dependencies
-for a 2D shoot'em up style underwater action game. The game utilizes
-the tiny-graphics library (a subset of the famous WebGL library), and
-implements graphics paradigms such as collision detection between objects,
-physics based animation of moving objects, and dynamic/random object
-instantiation. Refer to the presentation below for more details on gameplay:
