@@ -36,7 +36,9 @@ Graphics Features:
           
           
           
-The following presentation regurgitates some of the information above and includes game visuals/animations:
+       
+This presentation consolodates information above and includes game visuals/animations:
+          
           
           
   ![Alt text](./UnderwaterAdventuresPresentation/slide1.svg)
