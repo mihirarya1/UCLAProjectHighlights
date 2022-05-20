@@ -22,8 +22,8 @@
 
 	part2 is in portions a continuation/adaptation of part1. part2Server.c contains the server side implementation of this 
 	project; at a high level, it forwards client output (under the rules of part1Client.c) to a child process, and then 
-	redirects the output of the child process back towards the client. The client (part2Client.c) sends/receives data from the server, posts
-	data to the screen as necessary, and also mantains a log file of all communication with the server.
+	redirects the output of the child process back towards the client. The client (part2Client.c) sends/receives data from 
+	the server, posts data to the screen as necessary, and also mantains a log file of all communication with the server.
 
 <p align="center">
   <img width="460" height="300" src="http://web.cs.ucla.edu/~harryxu/courses/111/winter21/ProjectGuide/P1B_design.png">
