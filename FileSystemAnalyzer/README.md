@@ -17,12 +17,22 @@
 	and produces summary information pertaining to the following parameters to stdout:
 	super blocks, groups, free-lists, inodes, indirect blocks, and directories.
 	
-	Output for each of the parameters will be in the format stipulated on the following page:
-	[http://web.cs.ucla.edu/~harryxu/courses/111/winter21/ProjectGuide/P3A.html](http://web.cs.ucla.edu/~harryxu/courses/111/winter21/ProjectGuide/P3A.html)
+Output for each of the parameters will be in the format stipulated on the following page:
+[http://web.cs.ucla.edu/~harryxu/courses/111/winter21/ProjectGuide/P3A.html](http://web.cs.ucla.edu/~harryxu/courses/111/winter21/ProjectGuide/P3A.html)
+
+### File System Consistency Analyzer
+
+	fileSystemConsistencyAnalyzer.py, takes in one argument, for the output file to be 
+	analyzed which was produced during the file system interpretation stage. Errors to be 
+	caught include block consistency audits, inode allocation audits (ex. checking that an
+	inode which shows up in the list of inodes doesn't appear in the bitmap of free inodes),
+	directory consistency audits, etc. 
+	
+	More information on the types of auditing performed can be found at:
+[http://web.cs.ucla.edu/~harryxu/courses/111/winter21/ProjectGuide/P3B.html](http://web.cs.ucla.edu/~harryxu/courses/111/winter21/ProjectGuide/P3B.html)
 
 
 	
-
 ### References:
 
 [http://www.nongnu.org/ext2-doc/ext2.html](http://www.nongnu.org/ext2-doc/ext2.html)<br/>
