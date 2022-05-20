@@ -12,7 +12,7 @@ Game Semantics:
           intended to allow the player to variate submarine speed between a set of lower and 
           upper bounds we set for it. 
 
-Game objects:
+Game Objects:
 
           The objects which the player can interact with consist of pirate treasure coins, 
           enemies the player’s submarine can shoot down with its torpedo, and underwater 
